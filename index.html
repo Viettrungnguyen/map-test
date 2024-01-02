@@ -641,20 +641,20 @@
         // Create a polygon and set its path and style
         var boundaryPolygon = new google.maps.Polygon({
           paths: boundaryCoordinates,
-          strokeColor: "#FF0000", // Red border color
-          strokeOpacity: 0.8,
+          strokeColor: "#a9bbf2", // Red border color
+          strokeOpacity: 1,
           strokeWeight: 2,
-          fillColor: "#FF0000", // Red fill color
-          fillOpacity: 0.35,
+          fillColor: "#a9bbf2", // Red fill color
+          fillOpacity: 0.2,
         });
-
-        var kmlLayer = new google.maps.KmlLayer({
-        url: 'https://raw.githubusercontent.com/Viettrungnguyen/map-test/main/school_location.kml',
-        map: map
-      });
-
-        // Set the polygon on the map
         boundaryPolygon.setMap(map);
+
+
+        // test sparate file
+        // var kmlLayer = new google.maps.KmlLayer({
+        //   url: "https://raw.githubusercontent.com/Viettrungnguyen/map-test/main/polygon_location.kml",
+        //   map: map,
+        // });
 
         schoolPos.forEach(function (point) {
           var marker = new google.maps.Marker({
