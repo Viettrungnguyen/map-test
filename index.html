@@ -2,9 +2,16 @@
 <html>
   <head>
     <title>Styled Boundary Polygon on Google Maps</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <style>
       #map {
-        height: 400px;
+        height: 100vh;
         width: 100%;
       }
     </style>
@@ -599,10 +606,36 @@
         { lat: 40.779646, lng: 140.783895 },
       ];
 
+      var schoolPos = [{ lat: 40.784884518538966, lng: 140.78994483152192 }];
+
+      const bukkenPos = [
+        {
+          position: { lat: 40.786365039937806, lng: 140.78627009269383 },
+          title: "Bukken 1",
+        },
+        {
+          position: { lat: 40.76959634175367, lng: 140.78421015638034 },
+          title: "Bukken 2",
+        },
+        {
+          position: { lat: 40.72837156069157, lng: 140.80549616624876 },
+          title: "Bukken 3",
+        },
+        {
+          position: { lat: 40.75334354513849, lng: 140.7948531232486 },
+          title: "Bukken 4",
+        },
+        {
+          position: { lat: 40.779646, lng: 140.783112 },
+          title: "Bukken 5",
+        },
+      ];
+
       function initMap() {
+        // Config zoom and center map
         var map = new google.maps.Map(document.getElementById("map"), {
-          center: { lat: 37.7749, lng: -122.4194 },
-          zoom: 12,
+          center: { lat: 40.779809, lng: 140.782721 },
+          zoom: 13,
         });
 
         // Create a polygon and set its path and style
@@ -615,9 +648,50 @@
           fillOpacity: 0.35,
         });
 
+        var kmlLayer = new google.maps.KmlLayer({
+        url: 'https://raw.githubusercontent.com/Viettrungnguyen/map-test/main/school_location.kml',
+        map: map
+      });
+
         // Set the polygon on the map
         boundaryPolygon.setMap(map);
+
+        schoolPos.forEach(function (point) {
+          var marker = new google.maps.Marker({
+            position: point,
+            map: map,
+            icon: "/school.svg",
+            title: "Marker at (" + point.lat + ", " + point.lng + ")",
+          });
+        });
+
+        // Create the markers of bukken
+        bukkenPos.forEach(({ position, title }, i) => {
+          const marker = new google.maps.Marker({
+            position,
+            map,
+            title: `${title}`,
+          });
+        });
       }
+
+      // // Style map
+      // const styles = {
+      //   default: [],
+      //   hide: [
+      //     {
+      //       featureType: "poi.business",
+      //       stylers: [{ visibility: "off" }],
+      //     },
+      //     {
+      //       featureType: "transit",
+      //       elementType: "labels.icon",
+      //       stylers: [{ visibility: "off" }],
+      //     },
+      //   ],
+      // };
+
+      // window.initMap = initMap;
     </script>
 
     <!-- Replace YOUR_API_KEY with your actual Google Maps API key -->
