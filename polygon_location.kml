@@ -12,10 +12,10 @@
 	<Style>
       <PolyStyle>
         <!-- Fill color in AABBGGR format (Alpha, Blue, Green, Red) -->
-        <color>990000FF</color>
+        <color>C6D7FA</color>
         <!-- Border color in AABBGGR format (Alpha, Blue, Green, Red) -->
         <outline>1</outline> <!-- 1 for true, 0 for false -->
-        <color>FF0000FF</color>
+        <color>C6D7FA</color>
       </PolyStyle>
     </Style>
 	<ExtendedData><SchemaData schemaUrl="#a2710_02g_schooldistrict">
