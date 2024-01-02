@@ -9,17 +9,7 @@
 </Schema>
 <Folder><name>a2710_02g_schooldistrict</name>
   <Placemark>
-	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
-	<ExtendedData><SchemaData schemaUrl="#a2710_02g_schooldistrict">
-		<SimpleData name="A27_005">02201</SimpleData>
-		<SimpleData name="A27_006">青森市立</SimpleData>
-		<SimpleData name="A27_007">浪館小学校</SimpleData>
-		<SimpleData name="A27_008">青森市浪館前田3-23-1</SimpleData>
-	</SchemaData></ExtendedData>
-      <MultiGeometry><Polygon><outerBoundaryIs><LinearRing><coordinates>140.711835,40.81591 140.711567,40.815727 140.711363,40.815908 140.711662,40.816113 140.711835,40.81591</coordinates></LinearRing></outerBoundaryIs></Polygon></MultiGeometry>
-  </Placemark>
-  <Placemark>
-	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>ff0000ff</fill></PolyStyle></Style>
 	<ExtendedData><SchemaData schemaUrl="#a2710_02g_schooldistrict">
 		<SimpleData name="A27_005">02201</SimpleData>
 		<SimpleData name="A27_006">青森市立</SimpleData>
