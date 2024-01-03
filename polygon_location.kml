@@ -13,10 +13,10 @@
         <Style>
           <PolyStyle>
             <!-- Fill color in AABBGGR format (Alpha, Blue, Green, Red) -->
-            <color>C6D7FA</color>
+            <color>6aa84f</color>
             <!-- Border color in AABBGGR format (Alpha, Blue, Green, Red) -->
             <outline>1</outline> <!-- 1 for true, 0 for false -->
-            <color>C6D7FA</color>
+            <color>6aa84f</color>
           </PolyStyle>
         </Style>
         <ExtendedData>
