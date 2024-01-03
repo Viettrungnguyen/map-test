@@ -9,16 +9,17 @@
     </Schema>
     <Folder>
       <name>a2710_02g_schooldistrict</name>
+      <Style>
+        <PolyStyle>
+          <!-- Fill color in AABBGGR format (Alpha, Blue, Green, Red) -->
+          <color>C6D7FA</color>
+          <!-- Border color in AABBGGR format (Alpha, Blue, Green, Red) -->
+          <outline>1</outline> <!-- 1 for true, 0 for false -->
+          <color>C6D7FA</color>
+        </PolyStyle>
+      </Style>
       <Placemark>
-        <Style>
-          <PolyStyle>
-            <!-- Fill color in AABBGGR format (Alpha, Blue, Green, Red) -->
-            <color>C6D7FA</color>
-            <!-- Border color in AABBGGR format (Alpha, Blue, Green, Red) -->
-            <outline>1</outline> <!-- 1 for true, 0 for false -->
-            <color>C6D7FA</color>
-          </PolyStyle>
-        </Style>
+        
         <ExtendedData>
           <SchemaData schemaUrl="#a2710_02g_schooldistrict">
             <SimpleData name="A27_005">02201</SimpleData>
