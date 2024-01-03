@@ -2,14 +2,15 @@
 <kml xmlns="http://www.opengis.net/kml/2.2">
 <Document id="root_doc">
   <Placemark>
-	<Style>
-		<IconStyle>
-		<Icon>
-			<href>http://maps.google.com/mapfiles/kml/pushpin/blue-pushpin.png</href>
-		</Icon>
-		</IconStyle>
-	</Style>
-	<name>1</name>
+	<name>Ab Kettleby</name>
+    <Style id="ID">
+<!-- specific to Style -->
+     <IconStyle>
+      <Icon>
+       <href>https://wcsb.nz/wellringers/dove6.bmp</href>
+      </Icon>
+     </IconStyle>
+   </Style>
 	<Point>
 		<coordinates>140.78986972967138, 40.784730171387096</coordinates>
 	</Point>
