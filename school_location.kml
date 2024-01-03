@@ -9,6 +9,14 @@
 </Schema>
 <Folder><name>a2710_02g_publicelementaryschool</name>
   <Placemark>
+    <Style>
+        <IconStyle>
+          <Icon>
+            <href>http://maps.google.com/mapfiles/kml/pushpin/blue-pushpin.png</href>
+          </Icon>
+        </IconStyle>
+    </Style>
+	    <name>1</name>
 	<ExtendedData><SchemaData schemaUrl="#a2710_02g_publicelementaryschool">
 		<SimpleData name="A27_001">02201</SimpleData>
 		<SimpleData name="A27_002">青森市立</SimpleData>
