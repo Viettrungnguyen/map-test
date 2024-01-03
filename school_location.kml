@@ -1,18 +1,27 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <kml xmlns="http://www.opengis.net/kml/2.2">
-<Document id="root_doc">
-  <Placemark>
-	<name>Ab Kettleby</name>
-    <Style id="ID">
-<!-- specific to Style -->
-     <IconStyle>
-      <Icon>
-       <href>https://wcsb.nz/wellringers/dove6.bmp</href>
-      </Icon>
-     </IconStyle>
-   </Style>
-	<Point>
-		<coordinates>140.78986972967138, 40.784730171387096</coordinates>
-	</Point>
-  </Placemark>
-</Document></kml>
+	<Document id="root_doc">
+		<Schema name="a2710_02g_publicelementaryschool" id="a2710_02g_publicelementaryschool">
+			<SimpleField name="A27_001" type="string"></SimpleField>
+			<SimpleField name="A27_002" type="string"></SimpleField>
+			<SimpleField name="A27_003" type="string"></SimpleField>
+			<SimpleField name="A27_004" type="string"></SimpleField>
+		</Schema>
+		<Folder>
+			<name>a2710_02g_publicelementaryschool</name>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#a2710_02g_publicelementaryschool">
+						<SimpleData name="A27_001">02201</SimpleData>
+						<SimpleData name="A27_002">青森市立</SimpleData>
+						<SimpleData name="A27_003">幸畑小学校</SimpleData>
+						<SimpleData name="A27_004">青森市幸畑松元50-2</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>140.78986972967138, 40.784730171387096</coordinates>
+				</Point>
+			</Placemark>
+		</Folder>
+	</Document>
+</kml>
