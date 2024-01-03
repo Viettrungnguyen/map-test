@@ -1,915 +1,190 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <kml xmlns="http://www.opengis.net/kml/2.2">
-  <Document>
-    <name>KML Samples</name>
-    <open>1</open>
-    <description>Unleash your creativity with the help of these examples!</description>
-    <Style id="downArrowIcon">
-      <IconStyle>
-        <Icon>
-          <href>http://maps.google.com/mapfiles/kml/pal4/icon28.png</href>
-        </Icon>
-      </IconStyle>
-    </Style>
-    <Style id="globeIcon">
-      <IconStyle>
-        <Icon>
-          <href>http://maps.google.com/mapfiles/kml/pal3/icon19.png</href>
-        </Icon>
-      </IconStyle>
-      <LineStyle>
-        <width>2</width>
-      </LineStyle>
-    </Style>
-    <Style id="transPurpleLineGreenPoly">
-      <LineStyle>
-        <color>7fff00ff</color>
-        <width>4</width>
-      </LineStyle>
-      <PolyStyle>
-        <color>7f00ff00</color>
-      </PolyStyle>
-    </Style>
-    <Style id="yellowLineGreenPoly">
-      <LineStyle>
-        <color>7f00ffff</color>
-        <width>4</width>
-      </LineStyle>
-      <PolyStyle>
-        <color>7f00ff00</color>
-      </PolyStyle>
-    </Style>
-    <Style id="thickBlackLine">
-      <LineStyle>
-        <color>87000000</color>
-        <width>10</width>
-      </LineStyle>
-    </Style>
-    <Style id="redLineBluePoly">
-      <LineStyle>
-        <color>ff0000ff</color>
-      </LineStyle>
-      <PolyStyle>
-        <color>ffff0000</color>
-      </PolyStyle>
-    </Style>
-    <Style id="blueLineRedPoly">
-      <LineStyle>
-        <color>ffff0000</color>
-      </LineStyle>
-      <PolyStyle>
-        <color>ff0000ff</color>
-      </PolyStyle>
-    </Style>
-    <Style id="transRedPoly">
-      <LineStyle>
-        <width>1.5</width>
-      </LineStyle>
-      <PolyStyle>
-        <color>7d0000ff</color>
-      </PolyStyle>
-    </Style>
-    <Style id="transBluePoly">
-      <LineStyle>
-        <width>1.5</width>
-      </LineStyle>
-      <PolyStyle>
-        <color>7dff0000</color>
-      </PolyStyle>
-    </Style>
-    <Style id="transGreenPoly">
-      <LineStyle>
-        <width>1.5</width>
-      </LineStyle>
-      <PolyStyle>
-        <color>7d00ff00</color>
-      </PolyStyle>
-    </Style>
-    <Style id="transYellowPoly">
-      <LineStyle>
-        <width>1.5</width>
-      </LineStyle>
-      <PolyStyle>
-        <color>7d00ffff</color>
-      </PolyStyle>
-    </Style>
-    <Style id="noDrivingDirections">
-      <BalloonStyle>
-        <text><![CDATA[
-          <b>$[name]</b>
-          <br /><br />
-          $[description]
-        ]]></text>
-      </BalloonStyle>
-    </Style>
+  <Document id="root_doc">
+    <Schema name="a2710_02g_schooldistrict" id="a2710_02g_schooldistrict">
+      <SimpleField name="A27_005" type="string"></SimpleField>
+      <SimpleField name="A27_006" type="string"></SimpleField>
+      <SimpleField name="A27_007" type="string"></SimpleField>
+      <SimpleField name="A27_008" type="string"></SimpleField>
+    </Schema>
     <Folder>
-      <name>Placemarks</name>
-      <description>These are just some of the different kinds of placemarks with
-        which you can mark your favorite places</description>
-      <LookAt>
-        <longitude>-122.0839597145766</longitude>
-        <latitude>37.42222904525232</latitude>
-        <altitude>0</altitude>
-        <heading>-148.4122922628044</heading>
-        <tilt>40.5575073395506</tilt>
-        <range>500.6566641072245</range>
-      </LookAt>
+      <name>a2710_02g_schooldistrict</name>
+      <Style>
+        <PolyStyle>
+          <!-- Fill color in AABBGGR format (Alpha, Blue, Green, Red) -->
+          <color>C6D7FA</color>
+          <!-- Border color in AABBGGR format (Alpha, Blue, Green, Red) -->
+          <outline>1</outline> <!-- 1 for true, 0 for false -->
+          <color>C6D7FA</color>
+        </PolyStyle>
+      </Style>
       <Placemark>
-        <name>Simple placemark</name>
-        <description>Attached to the ground. Intelligently places itself at the
-          height of the underlying terrain.</description>
-        <Point>
-          <coordinates>-122.0822035425683,37.42228990140251,0</coordinates>
-        </Point>
-      </Placemark>
-      <Placemark>
-        <name>Floating placemark</name>
-        <visibility>0</visibility>
-        <description>Floats a defined distance above the ground.</description>
-        <LookAt>
-          <longitude>-122.0839597145766</longitude>
-          <latitude>37.42222904525232</latitude>
-          <altitude>0</altitude>
-          <heading>-148.4122922628044</heading>
-          <tilt>40.5575073395506</tilt>
-          <range>500.6566641072245</range>
-        </LookAt>
-        <styleUrl>#downArrowIcon</styleUrl>
-        <Point>
-          <altitudeMode>relativeToGround</altitudeMode>
-          <coordinates>-122.084075,37.4220033612141,50</coordinates>
-        </Point>
-      </Placemark>
-      <Placemark>
-        <name>Extruded placemark</name>
-        <visibility>0</visibility>
-        <description>Tethered to the ground by a customizable
-          &quot;tail&quot;</description>
-        <LookAt>
-          <longitude>-122.0845787421525</longitude>
-          <latitude>37.42215078737763</latitude>
-          <altitude>0</altitude>
-          <heading>-148.4126684946234</heading>
-          <tilt>40.55750733918048</tilt>
-          <range>365.2646606980322</range>
-        </LookAt>
-        <styleUrl>#globeIcon</styleUrl>
-        <Point>
-          <extrude>1</extrude>
-          <altitudeMode>relativeToGround</altitudeMode>
-          <coordinates>-122.0857667006183,37.42156927867553,50</coordinates>
-        </Point>
-      </Placemark>
-    </Folder>
-    <Folder>
-      <name>Styles and Markup</name>
-      <visibility>0</visibility>
-      <description>With KML it is easy to create rich, descriptive markup to
-        annotate and enrich your placemarks</description>
-      <LookAt>
-        <longitude>-122.0845787422371</longitude>
-        <latitude>37.42215078726837</latitude>
-        <altitude>0</altitude>
-        <heading>-148.4126777488172</heading>
-        <tilt>40.55750733930874</tilt>
-        <range>365.2646826292919</range>
-      </LookAt>
-      <styleUrl>#noDrivingDirections</styleUrl>
-      <Document>
-        <name>Highlighted Icon</name>
-        <visibility>0</visibility>
-        <description>Place your mouse over the icon to see it display the new
-          icon</description>
-        <LookAt>
-          <longitude>-122.0856552124024</longitude>
-          <latitude>37.4224281311035</latitude>
-          <altitude>0</altitude>
-          <heading>0</heading>
-          <tilt>0</tilt>
-          <range>265.8520424250024</range>
-        </LookAt>
-        <Style id="highlightPlacemark">
-          <IconStyle>
-            <Icon>
-              <href>http://maps.google.com/mapfiles/kml/paddle/red-stars.png</href>
-            </Icon>
-          </IconStyle>
-        </Style>
-        <Style id="normalPlacemark">
-          <IconStyle>
-            <Icon>
-              <href>http://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href>
-            </Icon>
-          </IconStyle>
-        </Style>
-        <StyleMap id="exampleStyleMap">
-          <Pair>
-            <key>normal</key>
-            <styleUrl>#normalPlacemark</styleUrl>
-          </Pair>
-          <Pair>
-            <key>highlight</key>
-            <styleUrl>#highlightPlacemark</styleUrl>
-          </Pair>
-        </StyleMap>
-        <Placemark>
-          <name>Roll over this icon</name>
-          <visibility>0</visibility>
-          <styleUrl>#exampleStyleMap</styleUrl>
-          <Point>
-            <coordinates>-122.0856545755255,37.42243077405461,0</coordinates>
-          </Point>
-        </Placemark>
-      </Document>
-      <Placemark>
-        <name>Descriptive HTML</name>
-        <visibility>0</visibility>
-        <description><![CDATA[Click on the blue link!<br><br>
-Placemark descriptions can be enriched by using many standard HTML tags.<br>
-For example:
-<hr>
-Styles:<br>
-<i>Italics</i>, 
-<b>Bold</b>, 
-<u>Underlined</u>, 
-<s>Strike Out</s>, 
-subscript<sub>subscript</sub>, 
-superscript<sup>superscript</sup>, 
-<big>Big</big>, 
-<small>Small</small>, 
-<tt>Typewriter</tt>, 
-<em>Emphasized</em>, 
-<strong>Strong</strong>, 
-<code>Code</code>
-<hr>
-Fonts:<br> 
-<font color="red">red by name</font>, 
-<font color="#408010">leaf green by hexadecimal RGB</font>
-<br>
-<font size=1>size 1</font>, 
-<font size=2>size 2</font>, 
-<font size=3>size 3</font>, 
-<font size=4>size 4</font>, 
-<font size=5>size 5</font>, 
-<font size=6>size 6</font>, 
-<font size=7>size 7</font>
-<br>
-<font face=times>Times</font>, 
-<font face=verdana>Verdana</font>, 
-<font face=arial>Arial</font><br>
-<hr>
-Links: 
-<br>
-<a href="http://earth.google.com/">Google Earth!</a>
-<br>
- or:  Check out our website at www.google.com
-<hr>
-Alignment:<br>
-<p align=left>left</p>
-<p align=center>center</p>
-<p align=right>right</p>
-<hr>
-Ordered Lists:<br>
-<ol><li>First</li><li>Second</li><li>Third</li></ol>
-<ol type="a"><li>First</li><li>Second</li><li>Third</li></ol>
-<ol type="A"><li>First</li><li>Second</li><li>Third</li></ol>
-<hr>
-Unordered Lists:<br>
-<ul><li>A</li><li>B</li><li>C</li></ul>
-<ul type="circle"><li>A</li><li>B</li><li>C</li></ul>
-<ul type="square"><li>A</li><li>B</li><li>C</li></ul>
-<hr>
-Definitions:<br>
-<dl>
-<dt>Google:</dt><dd>The best thing since sliced bread</dd>
-</dl>
-<hr>
-Centered:<br><center>
-Time present and time past<br>
-Are both perhaps present in time future,<br>
-And time future contained in time past.<br>
-If all time is eternally present<br>
-All time is unredeemable.<br>
-</center>
-<hr>
-Block Quote:
-<br>
-<blockquote>
-We shall not cease from exploration<br>
-And the end of all our exploring<br>
-Will be to arrive where we started<br>
-And know the place for the first time.<br>
-<i>-- T.S. Eliot</i>
-</blockquote>
-<br>
-<hr>
-Headings:<br>
-<h1>Header 1</h1>
-<h2>Header 2</h2>
-<h3>Header 3</h3>
-<h3>Header 4</h4>
-<h3>Header 5</h5>
-<hr>
-Images:<br>
-<i>Remote image</i><br>
-<img src="//developers.google.com/kml/documentation/images/googleSample.png"><br>
-<i>Scaled image</i><br>
-<img src="//developers.google.com/kml/documentation/images/googleSample.png" width=100><br>
-<hr>
-Simple Tables:<br>
-<table border="1" padding="1">
-<tr><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td></tr>
-<tr><td>a</td><td>b</td><td>c</td><td>d</td><td>e</td></tr>
-</table>
-<br>
-[Did you notice that double-clicking on the placemark doesn't cause the viewer to take you anywhere? This is because it is possible to directly author a "placeless placemark". If you look at the code for this example, you will see that it has neither a point coordinate nor a LookAt element.]]]></description>
-      </Placemark>
-    </Folder>
-    <Folder>
-      <name>Ground Overlays</name>
-      <visibility>0</visibility>
-      <description>Examples of ground overlays</description>
-      <GroundOverlay>
-        <name>Large-scale overlay on terrain</name>
-        <visibility>0</visibility>
-        <description>Overlay shows Mount Etna erupting on July 13th, 2001.</description>
-        <LookAt>
-          <longitude>15.02468937557116</longitude>
-          <latitude>37.67395167941667</latitude>
-          <altitude>0</altitude>
-          <heading>-16.5581842842829</heading>
-          <tilt>58.31228652890705</tilt>
-          <range>30350.36838438907</range>
-        </LookAt>
-        <Icon>
-          <href>http://developers.google.com/kml/documentation/images/etna.jpg</href>
-        </Icon>
-        <LatLonBox>
-          <north>37.91904192681665</north>
-          <south>37.46543388598137</south>
-          <east>15.35832653742206</east>
-          <west>14.60128369746704</west>
-          <rotation>-0.1556640799496235</rotation>
-        </LatLonBox>
-      </GroundOverlay>
-    </Folder>
-    <Folder>
-      <name>Screen Overlays</name>
-      <visibility>0</visibility>
-      <description>Screen overlays have to be authored directly in KML. These
-        examples illustrate absolute and dynamic positioning in screen space.</description>
-      <ScreenOverlay>
-        <name>Simple crosshairs</name>
-        <visibility>0</visibility>
-        <description>This screen overlay uses fractional positioning to put the
-          image in the exact center of the screen</description>
-        <Icon>
-          <href>http://developers.google.com/kml/documentation/images/crosshairs.png</href>
-        </Icon>
-        <overlayXY x="0.5" y="0.5" xunits="fraction" yunits="fraction" />
-        <screenXY x="0.5" y="0.5" xunits="fraction" yunits="fraction" />
-        <rotationXY x="0.5" y="0.5" xunits="fraction" yunits="fraction" />
-        <size x="0" y="0" xunits="pixels" yunits="pixels" />
-      </ScreenOverlay>
-      <ScreenOverlay>
-        <name>Absolute Positioning: Top left</name>
-        <visibility>0</visibility>
-        <Icon>
-          <href>http://developers.google.com/kml/documentation/images/top_left.jpg</href>
-        </Icon>
-        <overlayXY x="0" y="1" xunits="fraction" yunits="fraction" />
-        <screenXY x="0" y="1" xunits="fraction" yunits="fraction" />
-        <rotationXY x="0" y="0" xunits="fraction" yunits="fraction" />
-        <size x="0" y="0" xunits="fraction" yunits="fraction" />
-      </ScreenOverlay>
-      <ScreenOverlay>
-        <name>Absolute Positioning: Top right</name>
-        <visibility>0</visibility>
-        <Icon>
-          <href>http://developers.google.com/kml/documentation/images/top_right.jpg</href>
-        </Icon>
-        <overlayXY x="1" y="1" xunits="fraction" yunits="fraction" />
-        <screenXY x="1" y="1" xunits="fraction" yunits="fraction" />
-        <rotationXY x="0" y="0" xunits="fraction" yunits="fraction" />
-        <size x="0" y="0" xunits="fraction" yunits="fraction" />
-      </ScreenOverlay>
-      <ScreenOverlay>
-        <name>Absolute Positioning: Bottom left</name>
-        <visibility>0</visibility>
-        <Icon>
-          <href>http://developers.google.com/kml/documentation/images/bottom_left.jpg</href>
-        </Icon>
-        <overlayXY x="0" y="-1" xunits="fraction" yunits="fraction" />
-        <screenXY x="0" y="0" xunits="fraction" yunits="fraction" />
-        <rotationXY x="0" y="0" xunits="fraction" yunits="fraction" />
-        <size x="0" y="0" xunits="fraction" yunits="fraction" />
-      </ScreenOverlay>
-      <ScreenOverlay>
-        <name>Absolute Positioning: Bottom right</name>
-        <visibility>0</visibility>
-        <Icon>
-          <href>http://developers.google.com/kml/documentation/images/bottom_right.jpg</href>
-        </Icon>
-        <overlayXY x="1" y="-1" xunits="fraction" yunits="fraction" />
-        <screenXY x="1" y="0" xunits="fraction" yunits="fraction" />
-        <rotationXY x="0" y="0" xunits="fraction" yunits="fraction" />
-        <size x="0" y="0" xunits="fraction" yunits="fraction" />
-      </ScreenOverlay>
-      <ScreenOverlay>
-        <name>Dynamic Positioning: Top of screen</name>
-        <visibility>0</visibility>
-        <Icon>
-          <href>http://developers.google.com/kml/documentation/images/dynamic_screenoverlay.jpg</href>
-        </Icon>
-        <overlayXY x="0" y="1" xunits="fraction" yunits="fraction" />
-        <screenXY x="0" y="1" xunits="fraction" yunits="fraction" />
-        <rotationXY x="0" y="0" xunits="fraction" yunits="fraction" />
-        <size x="1" y="0.2" xunits="fraction" yunits="fraction" />
-      </ScreenOverlay>
-      <ScreenOverlay>
-        <name>Dynamic Positioning: Right of screen</name>
-        <visibility>0</visibility>
-        <Icon>
-          <href>http://developers.google.com/kml/documentation/images/dynamic_right.jpg</href>
-        </Icon>
-        <overlayXY x="1" y="1" xunits="fraction" yunits="fraction" />
-        <screenXY x="1" y="1" xunits="fraction" yunits="fraction" />
-        <rotationXY x="0" y="0" xunits="fraction" yunits="fraction" />
-        <size x="0" y="1" xunits="fraction" yunits="fraction" />
-      </ScreenOverlay>
-    </Folder>
-    <Folder>
-      <name>Paths</name>
-      <visibility>0</visibility>
-      <description>Examples of paths. Note that the tessellate tag is by default
-        set to 0. If you want to create tessellated lines, they must be authored
-        (or edited) directly in KML.</description>
-      <Placemark>
-        <name>Tessellated</name>
-        <visibility>0</visibility>
-        <description><![CDATA[If the <tessellate> tag has a value of 1, the line will contour to the underlying terrain]]></description>
-        <LookAt>
-          <longitude>-112.0822680013139</longitude>
-          <latitude>36.09825589333556</latitude>
-          <altitude>0</altitude>
-          <heading>103.8120432044965</heading>
-          <tilt>62.04855796276328</tilt>
-          <range>2889.145007690472</range>
-        </LookAt>
-        <LineString>
-          <tessellate>1</tessellate>
-          <coordinates> -112.0814237830345,36.10677870477137,0
-            -112.0870267752693,36.0905099328766,0 </coordinates>
-        </LineString>
-      </Placemark>
-      <Placemark>
-        <name>Untessellated</name>
-        <visibility>0</visibility>
-        <description><![CDATA[If the <tessellate> tag has a value of 0, the line follow a simple straight-line path from point to point]]></description>
-        <LookAt>
-          <longitude>-112.0822680013139</longitude>
-          <latitude>36.09825589333556</latitude>
-          <altitude>0</altitude>
-          <heading>103.8120432044965</heading>
-          <tilt>62.04855796276328</tilt>
-          <range>2889.145007690472</range>
-        </LookAt>
-        <LineString>
-          <tessellate>0</tessellate>
-          <coordinates> -112.080622229595,36.10673460007995,0
-            -112.085242575315,36.09049598612422,0 </coordinates>
-        </LineString>
-      </Placemark>
-      <Placemark>
-        <name>Absolute</name>
-        <visibility>0</visibility>
-        <description>Transparent purple line</description>
-        <LookAt>
-          <longitude>-112.2719329043177</longitude>
-          <latitude>36.08890633450894</latitude>
-          <altitude>0</altitude>
-          <heading>-106.8161545998597</heading>
-          <tilt>44.60763714063257</tilt>
-          <range>2569.386744398339</range>
-        </LookAt>
-        <styleUrl>#transPurpleLineGreenPoly</styleUrl>
-        <LineString>
-          <tessellate>1</tessellate>
-          <altitudeMode>absolute</altitudeMode>
-          <coordinates> -112.265654928602,36.09447672602546,2357
-            -112.2660384528238,36.09342608838671,2357
-            -112.2668139013453,36.09251058776881,2357
-            -112.2677826834445,36.09189827357996,2357
-            -112.2688557510952,36.0913137941187,2357
-            -112.2694810717219,36.0903677207521,2357
-            -112.2695268555611,36.08932171487285,2357
-            -112.2690144567276,36.08850916060472,2357
-            -112.2681528815339,36.08753813597956,2357
-            -112.2670588176031,36.08682685262568,2357
-            -112.2657374587321,36.08646312301303,2357 </coordinates>
-        </LineString>
-      </Placemark>
-      <Placemark>
-        <name>Absolute Extruded</name>
-        <visibility>0</visibility>
-        <description>Transparent green wall with yellow outlines</description>
-        <LookAt>
-          <longitude>-112.2643334742529</longitude>
-          <latitude>36.08563154742419</latitude>
-          <altitude>0</altitude>
-          <heading>-125.7518698668815</heading>
-          <tilt>44.61038665812578</tilt>
-          <range>4451.842204068102</range>
-        </LookAt>
-        <styleUrl>#yellowLineGreenPoly</styleUrl>
-        <LineString>
-          <extrude>1</extrude>
-          <tessellate>1</tessellate>
-          <altitudeMode>absolute</altitudeMode>
-          <coordinates> -112.2550785337791,36.07954952145647,2357
-            -112.2549277039738,36.08117083492122,2357
-            -112.2552505069063,36.08260761307279,2357
-            -112.2564540158376,36.08395660588506,2357
-            -112.2580238976449,36.08511401044813,2357
-            -112.2595218489022,36.08584355239394,2357
-            -112.2608216347552,36.08612634548589,2357
-            -112.262073428656,36.08626019085147,2357
-            -112.2633204928495,36.08621519860091,2357
-            -112.2644963846444,36.08627897945274,2357
-            -112.2656969554589,36.08649599090644,2357 </coordinates>
-        </LineString>
-      </Placemark>
-      <Placemark>
-        <name>Relative</name>
-        <visibility>0</visibility>
-        <description>Black line (10 pixels wide), height tracks terrain</description>
-        <LookAt>
-          <longitude>-112.2580438551384</longitude>
-          <latitude>36.1072674824385</latitude>
-          <altitude>0</altitude>
-          <heading>4.947421249553717</heading>
-          <tilt>44.61324882043339</tilt>
-          <range>2927.61105910266</range>
-        </LookAt>
-        <styleUrl>#thickBlackLine</styleUrl>
-        <LineString>
-          <tessellate>1</tessellate>
-          <altitudeMode>relativeToGround</altitudeMode>
-          <coordinates> -112.2532845153347,36.09886943729116,645
-            -112.2540466121145,36.09919570465255,645
-            -112.254734666947,36.09984998366178,645
-            -112.255493345654,36.10051310621746,645
-            -112.2563157098468,36.10108441943419,645
-            -112.2568033076439,36.10159722088088,645
-            -112.257494011321,36.10204323542867,645
-            -112.2584106072308,36.10229131995655,645
-            -112.2596588987972,36.10240001286358,645
-            -112.2610581199487,36.10213176873407,645
-            -112.2626285262793,36.10157011437219,645 </coordinates>
-        </LineString>
-      </Placemark>
-      <Placemark>
-        <name>Relative Extruded</name>
-        <visibility>0</visibility>
-        <description>Opaque blue walls with red outline, height tracks terrain</description>
-        <LookAt>
-          <longitude>-112.2683594333433</longitude>
-          <latitude>36.09884362144909</latitude>
-          <altitude>0</altitude>
-          <heading>-72.24271551768405</heading>
-          <tilt>44.60855445139561</tilt>
-          <range>2184.193522571467</range>
-        </LookAt>
-        <styleUrl>#redLineBluePoly</styleUrl>
-        <LineString>
-          <extrude>1</extrude>
-          <tessellate>1</tessellate>
-          <altitudeMode>relativeToGround</altitudeMode>
-          <coordinates> -112.2656634181359,36.09445214722695,630
-            -112.2652238941097,36.09520916122063,630
-            -112.2645079986395,36.09580763864907,630
-            -112.2638827428817,36.09628572284063,630
-            -112.2635746835406,36.09679275951239,630
-            -112.2635711822407,36.09740038871899,630
-            -112.2640296531825,36.09804913435539,630
-            -112.264327720538,36.09880337400301,630
-            -112.2642436562271,36.09963644790288,630
-            -112.2639148687042,36.10055381117246,630
-            -112.2626894973474,36.10149062823369,630 </coordinates>
-        </LineString>
-      </Placemark>
-    </Folder>
-    <Folder>
-      <name>Polygons</name>
-      <visibility>0</visibility>
-      <description>Examples of polygon shapes</description>
-      <Folder>
-        <name>Google Campus</name>
-        <visibility>0</visibility>
-        <description>A collection showing how easy it is to create 3-dimensional
-          buildings</description>
-        <LookAt>
-          <longitude>-122.084120030116</longitude>
-          <latitude>37.42174011925477</latitude>
-          <altitude>0</altitude>
-          <heading>-34.82469740081282</heading>
-          <tilt>53.454348562403</tilt>
-          <range>276.7870053764046</range>
-        </LookAt>
-        <Placemark>
-          <name>Building 40</name>
-          <visibility>0</visibility>
-          <styleUrl>#transRedPoly</styleUrl>
+        
+        <ExtendedData>
+          <SchemaData schemaUrl="#a2710_02g_schooldistrict">
+            <SimpleData name="A27_005">02201</SimpleData>
+            <SimpleData name="A27_006">青森市立</SimpleData>
+            <SimpleData name="A27_007">幸畑小学校</SimpleData>
+            <SimpleData name="A27_008">青森市幸畑松元50-2</SimpleData>
+          </SchemaData>
+        </ExtendedData>
+        <MultiGeometry>
           <Polygon>
-            <extrude>1</extrude>
-            <altitudeMode>relativeToGround</altitudeMode>
             <outerBoundaryIs>
               <LinearRing>
-                <coordinates> -122.0848938459612,37.42257124044786,17
-                  -122.0849580979198,37.42211922626856,17
-                  -122.0847469573047,37.42207183952619,17
-                  -122.0845725380962,37.42209006729676,17
-                  -122.0845954886723,37.42215932700895,17
-                  -122.0838521118269,37.42227278564371,17
-                  -122.083792243335,37.42203539112084,17
-                  -122.0835076656616,37.42209006957106,17
-                  -122.0834709464152,37.42200987395161,17
-                  -122.0831221085748,37.4221046494946,17
-                  -122.0829247374572,37.42226503990386,17
-                  -122.0829339169385,37.42231242843094,17
-                  -122.0833837359737,37.42225046087618,17
-                  -122.0833607854248,37.42234159228745,17
-                  -122.0834204551642,37.42237075460644,17
-                  -122.083659133885,37.42251292011001,17
-                  -122.0839758438952,37.42265873093781,17
-                  -122.0842374743331,37.42265143972521,17
-                  -122.0845036949503,37.4226514386435,17
-                  -122.0848020460801,37.42261133916315,17
-                  -122.0847882750515,37.42256395055121,17
-                  -122.0848938459612,37.42257124044786,17 </coordinates>
+                <coordinates>140.783895,40.779052 140.784475,40.77944 140.783808,40.780089
+                  140.784171,40.780396 140.784155,40.78041 140.784112,40.780444 140.784909,40.78097
+                  140.784511,40.781202 140.784103,40.780989 140.784212,40.780869
+                  140.783994,40.780699 140.782468,40.781462 140.782302,40.781534
+                  140.781272,40.782406 140.780989,40.782205 140.780679,40.782433 140.78085,40.782569
+                  140.77887,40.784163 140.778711,40.784112 140.778553,40.784387 140.778311,40.784538
+                  140.778049,40.784786 140.777805,40.785267 140.777761,40.7856 140.777843,40.785723
+                  140.777832,40.786118 140.778351,40.786121 140.778802,40.786128
+                  140.778852,40.786054 140.779164,40.786284 140.779107,40.786396
+                  140.779101,40.786465 140.779101,40.786768 140.779106,40.787183
+                  140.779106,40.787653 140.779093,40.787937 140.779087,40.788396
+                  140.779031,40.788668 140.779001,40.788838 140.778922,40.788928
+                  140.778858,40.788977 140.778714,40.789099 140.778646,40.789182
+                  140.778608,40.789287 140.778561,40.7894 140.778507,40.789552 140.778468,40.789752
+                  140.778447,40.789964 140.778512,40.790036 140.778636,40.790164
+                  140.778071,40.790708 140.777724,40.791025 140.775995,40.791225
+                  140.774621,40.791401 140.773572,40.791551 140.773504,40.791592
+                  140.773212,40.792145 140.773095,40.792368 140.773002,40.792706
+                  140.772956,40.792926 140.772918,40.793114 140.772859,40.793296
+                  140.772745,40.793449 140.772397,40.793659 140.772141,40.793647 140.77156,40.793614
+                  140.769663,40.793521 140.768281,40.793396 140.768847,40.794221
+                  140.769581,40.795196 140.769943,40.795635 140.770873,40.795723
+                  140.772725,40.795979 140.772842,40.795457 140.773668,40.795564 140.77383,40.79557
+                  140.773938,40.795583 140.774029,40.795598 140.774155,40.795627
+                  140.774417,40.795686 140.774625,40.795731 140.77492,40.79574 140.775116,40.795672
+                  140.775232,40.795636 140.77535,40.795646 140.776032,40.795673 140.776076,40.795673
+                  140.776107,40.795657 140.776176,40.795579 140.776259,40.795501
+                  140.776549,40.795315 140.776885,40.795109 140.776972,40.795109
+                  140.777393,40.795151 140.77749,40.795167 140.777592,40.795172 140.777738,40.795165
+                  140.778015,40.795075 140.77814,40.795052 140.778398,40.794997 140.778513,40.794957
+                  140.778585,40.794934 140.778653,40.794932 140.77874,40.794946 140.778825,40.795023
+                  140.778841,40.795049 140.778915,40.79507 140.779003,40.795082 140.779037,40.795105
+                  140.779115,40.795179 140.779273,40.795139 140.779314,40.795139
+                  140.779342,40.795169 140.779581,40.795604 140.779624,40.79564 140.779693,40.795649
+                  140.779932,40.795685 140.780103,40.795711 140.780231,40.795763
+                  140.780296,40.795796 140.780311,40.795841 140.780296,40.795872
+                  140.780193,40.795924 140.779834,40.796102 140.779662,40.796187
+                  140.779523,40.796272 140.779877,40.796721 140.779981,40.796839 140.780199,40.79713
+                  140.780321,40.797293 140.780456,40.797247 140.780588,40.797152
+                  140.780786,40.796976 140.78097,40.796783 140.78115,40.79668 140.781459,40.796521
+                  140.781728,40.796351 140.78188,40.796263 140.782141,40.796201 140.782398,40.79619
+                  140.78277,40.796204 140.783056,40.796219 140.783383,40.796305 140.783699,40.796459
+                  140.784043,40.796762 140.784252,40.796966 140.784465,40.797204
+                  140.784638,40.797399 140.784854,40.797533 140.785077,40.797638
+                  140.785367,40.797725 140.78594,40.797818 140.786278,40.797845 140.786581,40.79785
+                  140.78678,40.797839 140.786934,40.797772 140.787188,40.797498 140.78742,40.797269
+                  140.787675,40.796977 140.78791,40.796712 140.788194,40.796435 140.788448,40.796154
+                  140.788581,40.795982 140.78869,40.795884 140.788838,40.795755 140.789023,40.795649
+                  140.789293,40.795528 140.789462,40.79548 140.789663,40.79548 140.789843,40.795498
+                  140.790013,40.795514 140.790388,40.795488 140.790644,40.795484
+                  140.790878,40.795467 140.791322,40.795444 140.791857,40.795373
+                  140.792032,40.795335 140.792467,40.795214 140.792758,40.795123
+                  140.792874,40.795082 140.792983,40.795035 140.793037,40.794982 140.79306,40.794923
+                  140.793095,40.794793 140.793127,40.794635 140.79318,40.794373 140.793248,40.794147
+                  140.793394,40.793659 140.793534,40.793343 140.793614,40.793182 140.793681,40.79303
+                  140.793904,40.792813 140.794151,40.792598 140.794633,40.792177
+                  140.794906,40.791916 140.795369,40.791458 140.795411,40.791366
+                  140.795424,40.791265 140.795403,40.791156 140.795354,40.79104 140.795292,40.790946
+                  140.795226,40.790876 140.795108,40.790803 140.794878,40.790679
+                  140.794371,40.790403 140.794147,40.790238 140.794024,40.790107 140.793965,40.78998
+                  140.793956,40.789862 140.793992,40.789735 140.794084,40.78959 140.794275,40.789428
+                  140.794705,40.789086 140.795021,40.788729 140.795324,40.788337
+                  140.795539,40.788051 140.79556,40.787616 140.79567,40.787098 140.796119,40.786237
+                  140.796315,40.785549 140.796428,40.785134 140.796311,40.784763
+                  140.796135,40.784302 140.795979,40.783448 140.796112,40.782627
+                  140.796092,40.781996 140.795883,40.781108 140.795795,40.780209
+                  140.795825,40.779608 140.795812,40.779337 140.7962,40.777762 140.796315,40.777451
+                  140.796456,40.77725 140.796633,40.777085 140.796863,40.776995 140.797151,40.77691
+                  140.797504,40.776812 140.79803,40.776685 140.798213,40.776622 140.79836,40.77652
+                  140.798513,40.776345 140.79866,40.776171 140.798772,40.775943 140.798872,40.775684
+                  140.799037,40.77529 140.799389,40.77471 140.799663,40.77445 140.799936,40.774252
+                  140.80044,40.774083 140.800672,40.773895 140.801251,40.77343 140.801718,40.773163
+                  140.802078,40.772942 140.802449,40.772819 140.80302,40.772368 140.803147,40.772115
+                  140.803284,40.77167 140.80325,40.771354 140.803084,40.771042 140.803113,40.770767
+                  140.803426,40.770247 140.803827,40.770025 140.804052,40.769898
+                  140.804262,40.769806 140.804545,40.769687 140.804716,40.769646 140.80517,40.769435
+                  140.805715,40.769053 140.805654,40.768777 140.805381,40.768302
+                  140.805126,40.767813 140.804961,40.767484 140.804799,40.766994
+                  140.804839,40.766853 140.804967,40.76673 140.805585,40.76637 140.806305,40.766062
+                  140.806711,40.765877 140.806931,40.765727 140.807082,40.765568
+                  140.807349,40.765153 140.807628,40.764527 140.807706,40.764163
+                  140.807623,40.763605 140.807658,40.763226 140.807768,40.76286 140.807907,40.762657
+                  140.808267,40.762449 140.808902,40.762179 140.809355,40.761955
+                  140.809766,40.761561 140.809989,40.761227 140.810428,40.76062 140.810918,40.760209
+                  140.811868,40.759575 140.812898,40.758913 140.813603,40.758387
+                  140.814193,40.757939 140.814654,40.757621 140.815292,40.757376 140.814952,40.75638
+                  140.813259,40.756761 140.813128,40.756241 140.812835,40.754815
+                  140.813483,40.754053 140.813484,40.754053 140.813483,40.754051
+                  140.813734,40.753773 140.813432,40.753566 140.813112,40.753483
+                  140.814028,40.752323 140.81691,40.748325 140.815996,40.748325 140.815044,40.748426
+                  140.814511,40.748527 140.81394,40.748527 140.812778,40.748498 140.811807,40.748585
+                  140.810721,40.74886 140.809922,40.749033 140.809255,40.749265 140.808388,40.749475
+                  140.807722,40.749735 140.806941,40.750169 140.806274,40.750531
+                  140.805379,40.750893 140.804859,40.751216 140.804331,40.751545
+                  140.803265,40.752037 140.802674,40.752254 140.80157,40.752543 140.800898,40.752689
+                  140.800473,40.753012 140.799483,40.753853 140.798897,40.754376 140.798408,40.75462
+                  140.797803,40.754992 140.797198,40.7555 140.796258,40.756302 140.795711,40.756953
+                  140.795158,40.75752 140.79481,40.757784 140.794372,40.758224 140.794128,40.758635
+                  140.793587,40.759349 140.793317,40.759721 140.79304,40.760115 140.793111,40.760193
+                  140.793221,40.760322 140.7933,40.760439 140.793386,40.760573 140.793532,40.760687
+                  140.793686,40.760756 140.793891,40.760804 140.794143,40.76084 140.794407,40.760882
+                  140.794612,40.760906 140.794793,40.760886 140.795092,40.760817 140.7954,40.760727
+                  140.79566,40.760664 140.795617,40.760751 140.795514,40.760913 140.795427,40.761027
+                  140.795355,40.761211 140.795331,40.761382 140.795299,40.761513
+                  140.795244,40.761645 140.795212,40.761756 140.795204,40.76184 140.795283,40.762026
+                  140.795348,40.762156 140.795474,40.762333 140.795535,40.762459
+                  140.795541,40.762471 140.795592,40.762611 140.795635,40.7628 140.795694,40.762905
+                  140.795723,40.762944 140.795793,40.763037 140.796011,40.763326
+                  140.796161,40.763536 140.796314,40.763716 140.796405,40.763848
+                  140.796507,40.764018 140.796553,40.76414 140.796564,40.764299 140.796537,40.764484
+                  140.796525,40.76461 140.796532,40.764733 140.796564,40.764847 140.796599,40.764988
+                  140.796631,40.765093 140.796696,40.765193 140.796838,40.765286
+                  140.796987,40.765376 140.797113,40.765463 140.797192,40.765532
+                  140.797247,40.765607 140.797295,40.765738 140.797367,40.765944
+                  140.797442,40.766114 140.797509,40.766249 140.797603,40.766357 140.797564,40.7666
+                  140.797533,40.766759 140.797489,40.766869 140.797455,40.766932
+                  140.797403,40.767006 140.79729,40.767133 140.797108,40.767318 140.796961,40.767471
+                  140.796825,40.767623 140.79672,40.767774 140.796611,40.767935 140.796532,40.768053
+                  140.796463,40.768131 140.796363,40.768217 140.796239,40.768291
+                  140.796094,40.768364 140.795951,40.768422 140.795797,40.768472
+                  140.795516,40.768565 140.795334,40.768655 140.795157,40.768769
+                  140.795019,40.768879 140.794925,40.768969 140.794815,40.769092
+                  140.794753,40.769182 140.794547,40.769485 140.794428,40.769659
+                  140.794264,40.769864 140.794153,40.769986 140.794059,40.770082
+                  140.793938,40.770188 140.793822,40.770275 140.793718,40.770364
+                  140.793617,40.770455 140.793563,40.770518 140.793512,40.770586
+                  140.793455,40.770725 140.793428,40.770762 140.793345,40.770885
+                  140.793256,40.771007 140.793171,40.771096 140.792974,40.771306
+                  140.792829,40.771453 140.792662,40.77161 140.792542,40.771728 140.792474,40.771811
+                  140.792358,40.771966 140.792261,40.772109 140.792176,40.772253
+                  140.792056,40.772393 140.791959,40.772485 140.79183,40.772596 140.791607,40.772768
+                  140.791403,40.77298 140.791107,40.773213 140.790806,40.773433 140.790118,40.774026
+                  140.789768,40.773884 140.789576,40.775066 140.789512,40.77589 140.789537,40.776297
+                  140.789357,40.776974 140.789331,40.777055 140.788488,40.776538
+                  140.787211,40.777838 140.785872,40.779143 140.785701,40.779058
+                  140.786099,40.778665 140.786069,40.778648 140.785921,40.778563
+                  140.786192,40.778323 140.785388,40.7777 140.785436,40.777601 140.785529,40.777462
+                  140.785752,40.777267 140.786073,40.777053 140.785875,40.776926 140.78578,40.776893
+                  140.785682,40.776879 140.785618,40.77688 140.78557,40.776886 140.785505,40.776912
+                  140.78534,40.777004 140.785272,40.77704 140.785213,40.777063 140.785167,40.777074
+                  140.785131,40.777077 140.785092,40.777071 140.784831,40.776959
+                  140.784665,40.777062 140.7843,40.77728 140.783896,40.777581 140.783698,40.777839
+                  140.782621,40.777937 140.782047,40.777943 140.78203,40.777639 140.781438,40.777888
+                  140.781731,40.778261 140.781916,40.778168 140.782029,40.778296
+                  140.781929,40.778373 140.781687,40.778561 140.781312,40.778735
+                  140.781007,40.778766 140.781007,40.779111 140.781007,40.779448
+                  140.781026,40.779809 140.782721,40.779789 140.782971,40.779646
+                  140.783895,40.779052</coordinates>
               </LinearRing>
             </outerBoundaryIs>
           </Polygon>
-        </Placemark>
-        <Placemark>
-          <name>Building 41</name>
-          <visibility>0</visibility>
-          <styleUrl>#transBluePoly</styleUrl>
-          <Polygon>
-            <extrude>1</extrude>
-            <altitudeMode>relativeToGround</altitudeMode>
-            <outerBoundaryIs>
-              <LinearRing>
-                <coordinates> -122.0857412771483,37.42227033155257,17
-                  -122.0858169768481,37.42231408832346,17
-                  -122.085852582875,37.42230337469744,17
-                  -122.0858799945639,37.42225686138789,17
-                  -122.0858860101409,37.4222311076138,17
-                  -122.0858069157288,37.42220250173855,17
-                  -122.0858379542653,37.42214027058678,17
-                  -122.0856732640519,37.42208690214408,17
-                  -122.0856022926407,37.42214885429042,17
-                  -122.0855902778436,37.422128290487,17
-                  -122.0855841672237,37.42208171967246,17
-                  -122.0854852065741,37.42210455874995,17
-                  -122.0855067264352,37.42214267949824,17
-                  -122.0854430712915,37.42212783846172,17
-                  -122.0850990714904,37.42251282407603,17
-                  -122.0856769818632,37.42281815323651,17
-                  -122.0860162273783,37.42244918858722,17
-                  -122.0857260327004,37.42229239604253,17
-                  -122.0857412771483,37.42227033155257,17 </coordinates>
-              </LinearRing>
-            </outerBoundaryIs>
-          </Polygon>
-        </Placemark>
-        <Placemark>
-          <name>Building 42</name>
-          <visibility>0</visibility>
-          <styleUrl>#transGreenPoly</styleUrl>
-          <Polygon>
-            <extrude>1</extrude>
-            <altitudeMode>relativeToGround</altitudeMode>
-            <outerBoundaryIs>
-              <LinearRing>
-                <coordinates> -122.0857862287242,37.42136208886969,25
-                  -122.0857312990603,37.42136935989481,25
-                  -122.0857312992918,37.42140934910903,25
-                  -122.0856077073679,37.42138390166565,25
-                  -122.0855802426516,37.42137299550869,25
-                  -122.0852186221971,37.42137299504316,25
-                  -122.0852277765639,37.42161656508265,25
-                  -122.0852598189347,37.42160565894403,25
-                  -122.0852598185499,37.42168200156,25
-                  -122.0852369311478,37.42170017860346,25
-                  -122.0852643957828,37.42176197982575,25
-                  -122.0853239032746,37.42176198013907,25
-                  -122.0853559454324,37.421852864452,25
-                  -122.0854108752463,37.42188921823734,25
-                  -122.0854795379357,37.42189285337048,25
-                  -122.0855436229819,37.42188921797546,25
-                  -122.0856260178042,37.42186013499926,25
-                  -122.085937287963,37.42186013453605,25
-                  -122.0859428718666,37.42160898590042,25
-                  -122.0859655469861,37.42157992759144,25
-                  -122.0858640462341,37.42147115002957,25
-                  -122.0858548911215,37.42140571326184,25
-                  -122.0858091162768,37.4214057134039,25
-                  -122.0857862287242,37.42136208886969,25 </coordinates>
-              </LinearRing>
-            </outerBoundaryIs>
-          </Polygon>
-        </Placemark>
-        <Placemark>
-          <name>Building 43</name>
-          <visibility>0</visibility>
-          <styleUrl>#transYellowPoly</styleUrl>
-          <Polygon>
-            <extrude>1</extrude>
-            <altitudeMode>relativeToGround</altitudeMode>
-            <outerBoundaryIs>
-              <LinearRing>
-                <coordinates> -122.0844371128284,37.42177253003091,19
-                  -122.0845118855746,37.42191111542896,19
-                  -122.0850470999805,37.42178755121535,19
-                  -122.0850719913391,37.42143663023161,19
-                  -122.084916406232,37.42137237822116,19
-                  -122.0842193868167,37.42137237801626,19
-                  -122.08421938659,37.42147617161496,19
-                  -122.0838086419991,37.4214613409357,19
-                  -122.0837899728564,37.42131306410796,19
-                  -122.0832796534698,37.42129328840593,19
-                  -122.0832609819207,37.42139213944298,19
-                  -122.0829373621737,37.42137236399876,19
-                  -122.0829062425667,37.42151569778871,19
-                  -122.0828502269665,37.42176282576465,19
-                  -122.0829435788635,37.42176776969635,19
-                  -122.083217411188,37.42179248552686,19
-                  -122.0835970430103,37.4217480074456,19
-                  -122.0839455556771,37.42169364237603,19
-                  -122.0840077894637,37.42176283815853,19
-                  -122.084113587521,37.42174801104392,19
-                  -122.0840762473784,37.42171341292375,19
-                  -122.0841447047739,37.42167881534569,19
-                  -122.084144704223,37.42181720660197,19
-                  -122.0842503333074,37.4218170700446,19
-                  -122.0844371128284,37.42177253003091,19 </coordinates>
-              </LinearRing>
-            </outerBoundaryIs>
-          </Polygon>
-        </Placemark>
-      </Folder>
-      <Folder>
-        <name>Extruded Polygon</name>
-        <description>A simple way to model a building</description>
-        <Placemark>
-          <name>The Pentagon</name>
-          <LookAt>
-            <longitude>-77.05580139178142</longitude>
-            <latitude>38.870832443487</latitude>
-            <heading>59.88865561738225</heading>
-            <tilt>48.09646074797388</tilt>
-            <range>742.0552506670548</range>
-          </LookAt>
-          <Polygon>
-            <extrude>1</extrude>
-            <altitudeMode>relativeToGround</altitudeMode>
-            <outerBoundaryIs>
-              <LinearRing>
-                <coordinates> -77.05788457660967,38.87253259892824,100
-                  -77.05465973756702,38.87291016281703,100
-                  -77.05315536854791,38.87053267794386,100
-                  -77.05552622493516,38.868757801256,100
-                  -77.05844056290393,38.86996206506943,100
-                  -77.05788457660967,38.87253259892824,100 </coordinates>
-              </LinearRing>
-            </outerBoundaryIs>
-            <innerBoundaryIs>
-              <LinearRing>
-                <coordinates> -77.05668055019126,38.87154239798456,100
-                  -77.05542625960818,38.87167890344077,100
-                  -77.05485125901024,38.87076535397792,100
-                  -77.05577677433152,38.87008686581446,100
-                  -77.05691162017543,38.87054446963351,100
-                  -77.05668055019126,38.87154239798456,100 </coordinates>
-              </LinearRing>
-            </innerBoundaryIs>
-          </Polygon>
-        </Placemark>
-      </Folder>
-      <Folder>
-        <name>Absolute and Relative</name>
-        <visibility>0</visibility>
-        <description>Four structures whose roofs meet exactly. Turn on/off
-          terrain to see the difference between relative and absolute
-          positioning.</description>
-        <LookAt>
-          <longitude>-112.3348969157552</longitude>
-          <latitude>36.14845533214919</latitude>
-          <altitude>0</altitude>
-          <heading>-86.91235037566909</heading>
-          <tilt>49.30695423894192</tilt>
-          <range>990.6761201087104</range>
-        </LookAt>
-        <Placemark>
-          <name>Absolute</name>
-          <visibility>0</visibility>
-          <styleUrl>#transBluePoly</styleUrl>
-          <Polygon>
-            <tessellate>1</tessellate>
-            <altitudeMode>absolute</altitudeMode>
-            <outerBoundaryIs>
-              <LinearRing>
-                <coordinates> -112.3372510731295,36.14888505105317,1784
-                  -112.3356128688403,36.14781540589019,1784
-                  -112.3368169371048,36.14658677734382,1784
-                  -112.3384408457543,36.14762778914076,1784
-                  -112.3372510731295,36.14888505105317,1784 </coordinates>
-              </LinearRing>
-            </outerBoundaryIs>
-          </Polygon>
-        </Placemark>
-        <Placemark>
-          <name>Absolute Extruded</name>
-          <visibility>0</visibility>
-          <styleUrl>#transRedPoly</styleUrl>
-          <Polygon>
-            <extrude>1</extrude>
-            <tessellate>1</tessellate>
-            <altitudeMode>absolute</altitudeMode>
-            <outerBoundaryIs>
-              <LinearRing>
-                <coordinates> -112.3396586818843,36.14637618647505,1784
-                  -112.3380597654315,36.14531751871353,1784
-                  -112.3368254237788,36.14659596244607,1784
-                  -112.3384555043203,36.14762621763982,1784
-                  -112.3396586818843,36.14637618647505,1784 </coordinates>
-              </LinearRing>
-            </outerBoundaryIs>
-          </Polygon>
-        </Placemark>
-        <Placemark>
-          <name>Relative</name>
-          <visibility>0</visibility>
-          <LookAt>
-            <longitude>-112.3350152490417</longitude>
-            <latitude>36.14943123077423</latitude>
-            <altitude>0</altitude>
-            <heading>-118.9214100848499</heading>
-            <tilt>37.92486261093203</tilt>
-            <range>345.5169113679813</range>
-          </LookAt>
-          <styleUrl>#transGreenPoly</styleUrl>
-          <Polygon>
-            <tessellate>1</tessellate>
-            <altitudeMode>relativeToGround</altitudeMode>
-            <outerBoundaryIs>
-              <LinearRing>
-                <coordinates> -112.3349463145932,36.14988705767721,100
-                  -112.3354019540677,36.14941108398372,100
-                  -112.3344428289146,36.14878490381308,100
-                  -112.3331289492913,36.14780840132443,100
-                  -112.3317019516947,36.14680755678357,100
-                  -112.331131440106,36.1474173426228,100
-                  -112.332616324338,36.14845453364654,100
-                  -112.3339876620524,36.14926570522069,100
-                  -112.3349463145932,36.14988705767721,100 </coordinates>
-              </LinearRing>
-            </outerBoundaryIs>
-          </Polygon>
-        </Placemark>
-        <Placemark>
-          <name>Relative Extruded</name>
-          <visibility>0</visibility>
-          <LookAt>
-            <longitude>-112.3351587892382</longitude>
-            <latitude>36.14979247129029</latitude>
-            <altitude>0</altitude>
-            <heading>-55.42811560891606</heading>
-            <tilt>56.10280503739589</tilt>
-            <range>401.0997279712519</range>
-          </LookAt>
-          <styleUrl>#transYellowPoly</styleUrl>
-          <Polygon>
-            <extrude>1</extrude>
-            <tessellate>1</tessellate>
-            <altitudeMode>relativeToGround</altitudeMode>
-            <outerBoundaryIs>
-              <LinearRing>
-                <coordinates> -112.3348783983763,36.1514008468736,100
-                  -112.3372535345629,36.14888517553886,100
-                  -112.3356068927954,36.14781612679284,100
-                  -112.3350034807972,36.14846469024177,100
-                  -112.3358353861232,36.1489624162954,100
-                  -112.3345888301373,36.15026229372507,100
-                  -112.3337937856278,36.14978096026463,100
-                  -112.3331798208424,36.1504472788618,100
-                  -112.3348783983763,36.1514008468736,100 </coordinates>
-              </LinearRing>
-            </outerBoundaryIs>
-          </Polygon>
-        </Placemark>
-      </Folder>
+        </MultiGeometry>
+      </Placemark>
     </Folder>
   </Document>
 </kml>
