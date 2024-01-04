@@ -11,16 +11,28 @@
     />
     <style>
       #map {
-        height: 100vh;
+        height: 400px;
         width: 100%;
+      }
+      #ember {
+        display: none;
+      }
+      #ember.mystyle {
+        display: block;
+      }
+      #ember.mystylenone {
+        display: none;
       }
     </style>
   </head>
   <body>
     <div id="map"></div>
-
+    <div id="ember">
+      <a href="javascript:void(0)" onclick="return theFunction();" id="info"
+        >Contact Name</a
+      >
+    </div>
     <script>
-      // Sample coordinates for the boundary polygon
       var boundaryCoordinates = [
         { lat: 40.780396, lng: 140.784155 },
         { lat: 40.78041, lng: 140.784112 },
@@ -606,7 +618,7 @@
         { lat: 40.779646, lng: 140.783895 },
       ];
 
-      var schoolPos = [{ lat: 40.784884518538966, lng: 140.78994483152192 }];
+      var schoolPos = { lat: 40.788, lng: 140.7831 };
 
       const bukkenPos = [
         {
@@ -632,40 +644,34 @@
       ];
 
       function initMap() {
-        // Config zoom and center map
         var map = new google.maps.Map(document.getElementById("map"), {
           center: { lat: 40.779809, lng: 140.782721 },
           zoom: 13,
         });
 
-        // Create a polygon and set its path and style
         var boundaryPolygon = new google.maps.Polygon({
           paths: boundaryCoordinates,
-          strokeColor: "#a9bbf2", // Red border color
+          strokeColor: "#a9bbf2",
           strokeOpacity: 1,
           strokeWeight: 2,
-          fillColor: "#a9bbf2", // Red fill color
+          fillColor: "#a9bbf2",
           fillOpacity: 0.2,
         });
         boundaryPolygon.setMap(map);
 
-        // test sparate file
-        // var kmlLayer = new google.maps.KmlLayer({
-        //   url: "https://raw.githubusercontent.com/Viettrungnguyen/map-test/main/polygon_location.kml",
-        //   map: map,
-        //   preserveViewport: true,
-        // });
-
-        schoolPos.forEach(function (point) {
-          var marker = new google.maps.Marker({
-            position: point,
-            map: map,
-            icon: "/school.svg",
-            title: "Marker at (" + point.lat + ", " + point.lng + ")",
-          });
+        var test = new google.maps.KmlLayer({
+          url: "https://raw.githubusercontent.com/Viettrungnguyen/map-test/shizuoka/school_location.kml",
+          map: map,
+          preserveViewport: true,
         });
 
-        // Create the markers of bukken
+        var marker = new google.maps.Marker({
+          position: schoolPos,
+          map: map,
+          icon: "https://raw.githubusercontent.com/Viettrungnguyen/map-test/main/school.svg",
+          title: "Marker at (" + schoolPos.lat + ", " + schoolPos.lng + ")",
+        });
+
         bukkenPos.forEach(({ position, title }, i) => {
           const marker = new google.maps.Marker({
             position,
@@ -673,28 +679,23 @@
             title: `${title}`,
           });
         });
+        marker.addListener("click", () => {
+          map.setZoom(17);
+          alert("test");
+          var element = document.getElementById("ember");
+          test.parentElement.classList.toggle("mystyle");
+          map.setCenter(marker.getPosition());
+        });
+
+        // Get the <span> element that closes the modal
       }
-
-      // // Style map
-      // const styles = {
-      //   default: [],
-      //   hide: [
-      //     {
-      //       featureType: "poi.business",
-      //       stylers: [{ visibility: "off" }],
-      //     },
-      //     {
-      //       featureType: "transit",
-      //       elementType: "labels.icon",
-      //       stylers: [{ visibility: "off" }],
-      //     },
-      //   ],
-      // };
-
-      // window.initMap = initMap;
+      var test = document.getElementById("info");
+      // When the user clicks on the button, open the modal
+      function theFunction() {
+        test.parentElement.classList.toggle("mystyle");
+      }
     </script>
 
-    <!-- Replace YOUR_API_KEY with your actual Google Maps API key -->
     <script
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD2_iNtr9rLpE-73cVndk-j5gKwjHlSRWc&callback=initMap"
       async
