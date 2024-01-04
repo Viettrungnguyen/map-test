@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <kml xmlns="http://www.opengis.net/kml/2.2">
-	<Document id="root_doc">
+	<Document>
 		<name>KmlFile</name>
 		<Style id="west_campus_style">
 			<IconStyle>
@@ -9,15 +9,19 @@
 					</href>
 				</Icon>
 			</IconStyle>
+			<BalloonStyle>
+				<text>$[video]</text>
+			</BalloonStyle>
 		</Style>
 		<Placemark>
+			<name>Google West Campus 1</name>
+			<styleUrl>#west_campus_style</styleUrl>
 			<ExtendedData>
-				<SchemaData schemaUrl="#a2710_02g_publicelementaryschool">
-					<SimpleData name="A27_001">02201</SimpleData>
-					<SimpleData name="A27_002">青森市立</SimpleData>
-					<SimpleData name="A27_003">幸畑小学校</SimpleData>
-					<SimpleData name="A27_004">青森市幸畑松元50-2</SimpleData>
-				</SchemaData>
+				<Data name="video">
+					<value><![CDATA[<iframe width="480" height="360"
+            src="https://www.youtube.com/embed/ZE8ODPL2VPI" frameborder="0"
+            allowfullscreen></iframe><br><br>]]></value>
+				</Data>
 			</ExtendedData>
 			<Point>
 				<coordinates>140.78986972967138, 40.784730171387096</coordinates>
